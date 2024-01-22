@@ -1,13 +1,16 @@
 public class AirplaneHomework {
     public static void main(String[] args) {
-        int[] shatle = new int[101];
-        for (int i = 1; i < shatle.length ; i++) {
-            shatle[i] = i; }
-        for (int i = 1; i < shatle.length ; i++) {
-            if (i== 4 || i==9 ){
-                i++;
+        int shatle = 1;
+
+        for (int i = 0; i < 100; i++) {
+            if (shatle % 10 == 4 || shatle % 10 == 9) {
+                shatle++;
             }
-            System.out.print(shatle[i]+ " ");
+            if (shatle / 10 % 10 == 4 || shatle / 10 % 10 == 9) {
+                shatle += 10;
+            }
+            System.out.print(shatle + " ");
+            shatle++;
         }
     }
 }
